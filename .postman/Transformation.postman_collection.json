@@ -1,0 +1,144 @@
+{
+  "info": {
+    "_postman_id": "98a2f7b2-c6a1-46c0-92c1-14f96b2db15b",
+    "name": "Transformation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31316922"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"a@a.com\",\r\n    \"password\": \"pass\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/auth/register",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"a@a.com\",\r\n    \"password\": \"pass\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/auth/login",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Transform",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNzc5ZWZkMy1lOTk1LTRjM2YtYTYzYi0xZTY3Yzc0ODQ4YjQiLCJlbWFpbCI6ImFAYS5jb20iLCJpYXQiOjE3ODI2NzIxMTQsImV4cCI6MTc4Mjc1ODUxNH0.0yJ_mkfWF7SPmsAPTD6tzLheIZ1NizQk5exw78oGJkCxCOrDlO3Y90Rjehnq8EThGbk751J2Ogt-DveNNH-0mA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"text\": \"WinWin Travel\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/process",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "process"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8081/api/transform",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Internal-Token",
+            "value": "Your-X-Internal-Token",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"text\": \"abcdefghijklmnopqrstuvwxyz\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8081/api/transform",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "transform"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
