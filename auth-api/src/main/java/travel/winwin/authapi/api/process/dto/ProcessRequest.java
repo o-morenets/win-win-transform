@@ -1,4 +1,5 @@
 package travel.winwin.authapi.api.process.dto;
 
-public record ProcessRequest() {
-}
+import jakarta.validation.constraints.NotBlank;
+
+public record ProcessRequest(@NotBlank String text) {}
