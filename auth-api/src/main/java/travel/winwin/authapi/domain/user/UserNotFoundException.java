@@ -1,0 +1,8 @@
+package travel.winwin.authapi.domain.user;
+
+public class UserNotFoundException extends RuntimeException {
+
+    public UserNotFoundException(String email) {
+        super("User not found: " + email);
+    }
+}
