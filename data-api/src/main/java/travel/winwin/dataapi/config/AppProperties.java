@@ -3,4 +3,7 @@ package travel.winwin.dataapi.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "app")
-public record AppProperties(String internalToken) {}
+public record AppProperties(
+        String internalToken
+) {
+}

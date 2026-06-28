@@ -20,10 +20,4 @@ public class UserService {
         User user = new User(email, passwordEncoder.encode(rawPassword));
         return userRepository.save(user);
     }
-
-    @Transactional(readOnly = true)
-    public User getByEmail(String email) {
-        return userRepository.findByEmail(email)
-                .orElseThrow(() -> new UserNotFoundException(email));
-    }
 }

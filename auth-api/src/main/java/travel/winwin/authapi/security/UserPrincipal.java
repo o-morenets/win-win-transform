@@ -13,6 +13,7 @@ public class UserPrincipal implements UserDetails {
 
     @Getter
     private final UUID id;
+
     private final String email;
     private final String passwordHash;
 

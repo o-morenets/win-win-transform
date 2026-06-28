@@ -5,9 +5,11 @@ import jakarta.validation.constraints.NotBlank;
 
 public record LoginRequest(
 
-        @NotBlank @Email
+        @Email
+        @NotBlank
         String email,
 
         @NotBlank
         String password
-) {}
+) {
+}

@@ -13,9 +13,11 @@ public record AppProperties(
     public record Jwt(
             String secret,
             @DefaultValue("86400000") long expirationMs
-    ) {}
+    ) {
+    }
 
     public record DataApi(
             @DefaultValue("http://data-api:8081") String url
-    ) {}
+    ) {
+    }
 }

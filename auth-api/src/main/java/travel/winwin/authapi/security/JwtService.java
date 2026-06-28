@@ -47,15 +47,6 @@ public class JwtService {
         return UUID.fromString(subject);
     }
 
-    public String extractEmail(String token) {
-        return Jwts.parser()
-                .verifyWith(signingKey)
-                .build()
-                .parseSignedClaims(token)
-                .getPayload()
-                .get("email", String.class);
-    }
-
     public boolean isValid(String token) {
         try {
             Jwts.parser()
