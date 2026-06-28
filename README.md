@@ -18,7 +18,7 @@ Two Spring Boot microservices with JWT auth and inter-service communication.
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/o-morenets/transformation.git
+git clone https://github.com/o-morenets/win-win-transform
 cd transformation
 ```
 
