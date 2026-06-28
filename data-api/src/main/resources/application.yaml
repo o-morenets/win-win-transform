@@ -1,3 +1,9 @@
+server:
+  port: 8081
+
 spring:
   application:
-    name: transform
+    name: data-api
+
+app:
+  internal-token: ${INTERNAL_TOKEN}
