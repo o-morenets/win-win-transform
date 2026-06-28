@@ -1,4 +1,4 @@
-package travel.winwin.auth;
+package travel.winwin.authapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
